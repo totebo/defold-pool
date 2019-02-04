@@ -1,4 +1,4 @@
-# Defold States
+# Defold Pool
 A minimal pool system for Defold.
 
 # Installation
@@ -9,6 +9,8 @@ You can use Defold Pool in your own project by adding this project as a [Defold 
 Or point to the ZIP file of a [specific release](https://github.com/totebo/defold-pool/releases).
 
 ## Example
+
+      local pool = require "pool.pool"
 
       -- Add items to pool
       local id = "test"
@@ -23,7 +25,7 @@ Or point to the ZIP file of a [specific release](https://github.com/totebo/defol
       local object = pool:remove( id )
       pprint( object )
 
-### stats.add( id, object )
+### pool.add( id, object )
 Adds an object to the pool.
 
 **PARAMETERS**
@@ -31,7 +33,7 @@ Adds an object to the pool.
 * `id` Pool id.
 * `object` Object to store in pool.
 
-### states.remove( id )
+### pool.remove( id )
 Removes an object to the pool.
 
 **PARAMETERS**
