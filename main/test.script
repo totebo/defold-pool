@@ -1,0 +1,45 @@
+local pool = require "pool.pool"
+
+function init(self)
+	-- Add initialization code here
+	-- Remove this function if not needed
+
+	local id = "1sdf"
+	
+	for i=1, 100 do
+		local object = {test="test object"}
+		pool:add( id,object )
+	end
+
+
+	for i=1, 100 do
+	local object = pool:remove( id )
+	pprint( object )
+end
+
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+	-- Add input-handling code here
+	-- Remove this function if not needed
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Remove this function if not needed
+end
